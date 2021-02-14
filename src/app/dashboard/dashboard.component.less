@@ -1,0 +1,44 @@
+.profile {
+	@apply flex;
+
+	&-avatar {
+		@apply w-36 h-36 rounded-full;
+	}
+
+	&-infos {
+		@apply ml-5 mt-2 flex flex-col;
+
+		& .profile-location {
+			@apply flex flex-row;
+
+			& svg {
+				@apply w-4 mr-1 fill-current;
+			}
+		}
+
+		& .profile-bio {
+			@apply whitespace-pre-line mt-1;
+		}
+
+		& .profile-blog,
+		& .profile-twitter {
+			@apply text-blue-400 transition-colors duration-75 flex flex-row items-center;
+
+			&:hover {
+				@apply text-blue-700;
+
+				& > span {
+					@apply underline;
+				}
+			}
+
+			svg {
+				@apply w-4 mr-1;
+			}
+		}
+
+		& .profile-twitter svg {
+			@apply fill-current;
+		}
+	}
+}

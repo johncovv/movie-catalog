@@ -1,0 +1,19 @@
+.left-card-item {
+	@apply border border-gray-200 flex flex-row;
+
+	svg {
+		@apply w-5 mr-1;
+	}
+
+	&:not(:first-child) {
+		@apply border-t-0;
+	}
+
+	&:first-child {
+		@apply rounded-t-md;
+	}
+
+	&:last-child {
+		@apply rounded-b-md;
+	}
+}
